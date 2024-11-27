@@ -18,9 +18,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'manalip2134@gmail.com'
-app.config['MAIL_PASSWORD'] = 'iqjr gwwx lwod fwkp'  # Use app password here, not Gmail password
-app.config['MAIL_DEFAULT_SENDER'] = 'manalip2134@gmail.com'
+app.config['MAIL_USERNAME'] = 'your_mail@gmail.com'
+app.config['MAIL_PASSWORD'] = 'your password here'  # Use app password here, not Gmail password
+app.config['MAIL_DEFAULT_SENDER'] = 'your_mail@gmail.com'
 app.secret_key = secrets.token_hex(16)  # Secure random secret key for session management
 
 # Flask-Mail initialization
