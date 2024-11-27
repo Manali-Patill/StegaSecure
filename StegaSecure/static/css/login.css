@@ -1,0 +1,92 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align the form container to the left */
+    align-items: center; /* Vertically center the container */
+    height: 100vh;
+    background-image: url('../media/login_bg.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the background */
+    background-attachment: fixed; /* Fix the background while scrolling */
+}
+
+/* Heading Styling */
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+    width: 100%;
+}
+
+/* Form Container Styling */
+.form-container {
+    width: 2000px;
+    max-width: 600px; /* Fixed max-width */
+    /* height: 500px; */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(51, 24, 223, 0.2); /* Soft shadow for depth */
+    backdrop-filter: blur(8px); /* Subtle blur effect on the background */
+    text-align: center;
+    margin-right: 800px; /* Shift the container to the left */
+}
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields Styling */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

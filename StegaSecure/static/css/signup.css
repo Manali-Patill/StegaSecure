@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 100vh;
+    background-image: url('../media/signup_bg.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed while scrolling */
+}
+
+/* Signup Container Styling */
+#signup-container {
+    width: 90%; /* Set a percentage width for responsiveness */
+    max-width: 600px; /* Limits the width on larger screens */
+    min-height: 300px; /* Ensures the height is smaller */
+    background-color: rgba(255, 255, 255, 0.001); /* White background with slight opacity */
+    padding: 15px; /* Reduced padding to make it more compact */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(215, 8, 191, 0.372);
+    backdrop-filter: blur(10px); /* Adds a subtle blur effect to the background */
+    text-align: center; /* Centers the form content */
+    margin-left: 690px;
+}
+
+/* Heading Styling */
+h2 {
+    text-align: center;
+    color: white; /* Change text color to white */
+    margin-bottom: 15px;
+    font-size: 20px; /* Smaller heading size */
+}
+
+/* Label Styling */
+label {
+    font-size: 13px; /* Smaller label text */
+    color: white; /* Change label text color to white */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px; /* Smaller padding for inputs */
+    margin: 5px 0 15px; /* Reduced margin */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px; /* Smaller font size */
+    color: white; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    text-align: left;
+}
+
+input[type="file"] {
+    padding: 6px;
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF;
+    color: white; /* Change button text color to white */
+    padding: 10px; /* Smaller button */
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+    font-size: 13px; /* Smaller font size */
+    color: white; /* Change link text color to white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

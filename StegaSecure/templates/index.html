@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <p id="welcome"></p>
+    
+    <a href="/logout" class="logout-link">Logout</a>
+    <div class="container">
+
+        <!-- Digital Data Protection Section -->
+        <div class="data-protection">
+            <h3>Digital Data Protection</h3>
+            <p>In today’s digital world, it is essential to take the necessary steps to protect your personal data from unauthorized access and misuse. We've collected some data through a survey and we found the following outcomes:</p>
+
+            <!-- Images Before Awareness Content -->
+            <div class="image-gallery">
+                <img src="../static/media/img1.jpg" alt="Security Image 1">
+                <img src="../static/media/img2.jpg" alt="Security Image 2">
+                <img src="../static/media/img3.jpg" alt="Security Image 3">
+                <img src="../static/media/img4.jpg" alt="Security Image 4">
+            </div>
+
+            <!-- Tips Section -->
+            <div class="tips">
+                <div class="tip">
+                    <h4>1. Use Strong Passwords</h4>
+                    <p>Ensure that your passwords are long, complex, and unique. Avoid using common phrases or easily guessable information.</p>
+                </div>
+                <div class="tip">
+                    <h4>2. Enable Two-Factor Authentication</h4>
+                    <p>Whenever possible, enable two-factor authentication (2FA) to add an extra layer of security to your accounts.</p>
+                </div>
+                <div class="tip">
+                    <h4>3. Beware of Phishing Attacks</h4>
+                    <p>Always be cautious when clicking on links in emails or messages, especially if they seem suspicious. Verify the sender before engaging.</p>
+                </div>
+                <div class="tip">
+                    <h4>4. Encrypt Sensitive Data</h4>
+                    <p>Make sure that sensitive data, like financial details or personal identification, is encrypted both at rest and during transmission.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Show an alert box upon successful login
+            alert("You are logged in successfully.");
+    
+            // Hide the success message automatically after 5 seconds
+            setTimeout(function() {
+                var successMessage = document.getElementById("welcome");
+                successMessage.style.display = "none"; // Hide the message
+            }, 5000); // 5000 milliseconds = 5 seconds
+    
+            // Function to close the success message when the "×" is clicked
+            document.getElementById("closeMessage").onclick = function() {
+                var successMessage = document.getElementById("loginSuccessMessage");
+                successMessage.style.display = "none"; // Hide the message
+            };
+        };
+    </script>
+</body>
+</html>

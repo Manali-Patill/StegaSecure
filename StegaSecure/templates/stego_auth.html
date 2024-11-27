@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Authentication</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+        }
+        .auth-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 100%;
+            background-color: #f9f9f9;
+        }
+        input[type="file"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .form-footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .form-footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="auth-container">
+    <h2>Steganography Authentication</h2>
+    <p>Please upload the image that contains the hidden message.</p>
+    <form id="stegoForm" action="/stego_auth" method="POST" enctype="multipart/form-data">
+        <input type="file" name="stegano_image" accept="image/*" required />
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="form-footer">
+        <p>Need help? <a href="/help">Click here</a></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('stegoForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        // Show a loading message or animation (Optional)
+        let button = document.querySelector("button[type='submit']");
+        button.textContent = "Uploading..."; // Change button text to indicate upload is in progress
+        button.disabled = true; // Disable the button to prevent multiple submissions
+
+        // Perform the form submission using Fetch API to get control over the process
+        let formData = new FormData(this);
+
+        fetch('/stego_auth', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // If the upload is successful, redirect to the index.html
+                window.location.href = '/dashboard';
+            } else {
+                // If the upload fails, alert the user and re-enable the button
+                alert("Error uploading image.");
+                button.textContent = "Submit"; // Reset button text
+                button.disabled = false; // Re-enable the button
+            }
+        })
+        .catch(error => {
+            // Handle errors if the fetch request fails
+            alert("An error occurred. Please try again.");
+            button.textContent = "Submit"; // Reset button text
+            button.disabled = false; // Re-enable the button
+        });
+    });
+</script>
+
+</body>
+</html>
